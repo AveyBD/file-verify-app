@@ -15,9 +15,7 @@ function App() {
         <Route path='/register' element={<Register />}></Route>
         <Route path="/dashboard" element={<Dashboard/>}>
         <Route index element={<File />}></Route> 
-        </Route>  
-        <Route path="/login" element={<Login />}></Route>
-        <Route path="/register" element={<Register />}></Route>
+        </Route> 
         <Route path="/panel" element={<UserPane />}></Route>
       </Routes>
     </div>
