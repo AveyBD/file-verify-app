@@ -8,7 +8,7 @@ const File = () => {
                 <div class="card w-40 h-32 bg-orange-600 shadow-xl">
                     <div class="card-body text-center text-white">
                         <h2 class="text-2xl font-bold">36</h2>
-                        <p>Open Bugs</p>
+                        <p>Total files</p>
                     </div>
                 </div>
 

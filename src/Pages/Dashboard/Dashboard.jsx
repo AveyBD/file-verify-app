@@ -1,9 +1,12 @@
 import React from 'react';
 import { Outlet,Link } from 'react-router-dom';
+import Navbar from '../Shared/Navbar';
 
 const Dashboard = () => {
     return (
-        <div class="drawer drawer-mobile">
+        <div>
+            <Navbar/>
+            <div class="drawer drawer-mobile">
         <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
         <div class="drawer-content">
           {/* <!-- Page content here --> */}
@@ -19,6 +22,7 @@ const Dashboard = () => {
         
         </div>
       </div>
+        </div>
     );
 };
 
