@@ -1,4 +1,5 @@
 import React from "react";
+import { BsPencilSquare, BsTrash } from "react-icons/bs";
 
 const AllFile = () => {
   return (
@@ -12,6 +13,7 @@ const AllFile = () => {
               <th>Title</th>
               <th>Model</th>
               <th>Year</th>
+              <th>Status</th>
               <th>Action</th>
             </tr>
           </thead>
@@ -22,7 +24,15 @@ const AllFile = () => {
               <td>Cy Ganderton</td>
               <td>Quality Control Specialist</td>
               <td>Blue</td>
-              <td>Hello</td>
+              <td>Pending</td>
+              <td className="flex gap-1">
+                <span>
+                  <BsPencilSquare />
+                </span>
+                <span>
+                  <BsTrash />
+                </span>
+              </td>
             </tr>
             {/* <!-- row 2 --> */}
             <tr>
@@ -30,7 +40,15 @@ const AllFile = () => {
               <td>Hart Hagerty</td>
               <td>Desktop Support Technician</td>
               <td>Purple</td>
-              <td>Bello</td>
+              <td>Completed</td>
+              <td className="flex gap-1">
+                <span>
+                  <BsPencilSquare />
+                </span>
+                <span>
+                  <BsTrash />
+                </span>
+              </td>
             </tr>
             {/* <!-- row 3 --> */}
             <tr>
@@ -38,7 +56,15 @@ const AllFile = () => {
               <td>Brice Swyre</td>
               <td>Tax Accountant</td>
               <td>Red</td>
-              <td>Kello</td>
+              <td>Rejected</td>
+              <td className="flex gap-1">
+                <span>
+                  <BsPencilSquare />
+                </span>
+                <span>
+                  <BsTrash />
+                </span>
+              </td>
             </tr>
           </tbody>
         </table>
