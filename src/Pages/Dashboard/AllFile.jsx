@@ -71,53 +71,26 @@ const AllFile = () => {
           </thead>
           <tbody>
             {/* <!-- row 1 --> */}
-            <tr>
-              <th>1</th>
-              <td>Cy Ganderton</td>
-              <td>Quality Control Specialist</td>
-              <td>Blue</td>
+            {
+              allFiles.map((file,index) => 
+                <tr>
+              <th>{index+1}</th>
+              <td>{file.title}</td>
+              <td>{file.model}</td>
+              <td>{file.year}</td>
               <td>Pending</td>
               <td className="flex gap-1">
                 <span>
                   <BsPencilSquare />
                 </span>
                 <span>
-                  <BsTrash />
+                  <BsTrash onClick={() => handleDelete(file._id)}/>
                 </span>
               </td>
             </tr>
+                )
+            }
             {/* <!-- row 2 --> */}
-            <tr>
-              <th>2</th>
-              <td>Hart Hagerty</td>
-              <td>Desktop Support Technician</td>
-              <td>Purple</td>
-              <td>Completed</td>
-              <td className="flex gap-1">
-                <span>
-                  <BsPencilSquare />
-                </span>
-                <span>
-                  <BsTrash />
-                </span>
-              </td>
-            </tr>
-            {/* <!-- row 3 --> */}
-            <tr>
-              <th>3</th>
-              <td>Brice Swyre</td>
-              <td>Tax Accountant</td>
-              <td>Red</td>
-              <td>Rejected</td>
-              <td className="flex gap-1">
-                <span>
-                  <BsPencilSquare />
-                </span>
-                <span>
-                  <BsTrash onClick={() => handleDelete(allFiles._id)}/>
-                </span>
-              </td>
-            </tr>
           </tbody>
         </table>
       </div>
