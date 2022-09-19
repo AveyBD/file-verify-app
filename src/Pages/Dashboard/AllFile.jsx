@@ -15,7 +15,11 @@ const AllFile = () => {
         }
     })
     .then(res => res.json())
-    .then(data => setAllFiles(data))
+    .then(data => {
+      setAllFiles(data)
+      
+    })
+      
   },[])
   const handleDelete = id => {
     Swal.fire({

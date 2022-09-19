@@ -77,8 +77,8 @@ const AddFile = () => {
                                      {...register("year", { required: true })}
                                      type="date" />
                                 </div>
-                                <div className='btn btn-primary mt-3 ml-80 flex justify-end'>
-                                <input type="submit" value='Upload' />
+                                <div className='btn  btn-primary mt-3 ml-80 flex justify-end'>
+                                <input type="submit" value='Upload' data-bs-dismiss="offcanvas" aria-label="Close"/>
                                 <FiUpload className='inline-block ml-2 text-xl'/>
                                 </div>
                             </div>
