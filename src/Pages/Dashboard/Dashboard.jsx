@@ -12,15 +12,15 @@ const Dashboard = () => {
           {/* <!-- Page content here --> */}
           <Outlet></Outlet>
         </div>
-        <div class="drawer-side">
+        <div class="drawer-side mt-16">
           <label for="my-drawer-2" class="drawer-overlay"></label>
           <ul class="menu p-4 overflow-y-auto w-60 bg-base-300 text-base-content">
             {/* <!-- Sidebar content here --> */}
             <li>
-              <Link to="/dashboard">Sidebar Item 1</Link>
+              <Link to="/dashboard">Dashboard Home</Link>
             </li>
             <li>
-              <a>Sidebar Item 2</a>
+              <a>Support</a>
             </li>
           </ul>
         </div>

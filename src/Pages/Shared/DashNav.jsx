@@ -1,11 +1,12 @@
 import React from "react";
+import {Link} from 'react-router-dom';
 
 const DashNav = () => {
   return (
     <div>
-      <div className="navbar bg-base-100 border-b">
+      <div className="navbar bg-base-100 border-b z-40 absolute">
         <div className="flex-1">
-          <a className="btn btn-ghost normal-case text-xl">FileCheckApp</a>
+          <Link to='/' className="btn btn-ghost normal-case text-xl">FileCheckApp</Link>
         </div>
         <div className="flex-none gap-2">
           <div className="form-control">

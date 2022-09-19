@@ -4,7 +4,7 @@ import AllFile from './AllFile';
 const File = () => {
     return (
         <div>
-            <div className='grid gap-10 grid-cols-2 lg:grid-cols-4 mr-10 p-10'>
+            <div className='grid gap-10 grid-cols-2 lg:grid-cols-4 mr-10 p-20'>
                 <div class="card w-full h-32 bg-orange-600 shadow-xl">
                     <div class="card-body text-center text-white">
                         <h2 class="text-2xl font-bold">36</h2>
