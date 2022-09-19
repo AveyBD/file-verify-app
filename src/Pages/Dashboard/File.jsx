@@ -1,19 +1,26 @@
 import React, { useEffect, useState } from 'react';
 import AllFile from './AllFile';
+import { useQuery } from "react-query";
+import Loading from '../Shared/Loading';
 
 const File = () => {
-    const [allFiles,setAllFiles] = useState([])
-    useEffect(()=>{
-      const url = `http://localhost:5000/files`
-      fetch(url, {
-          method: 'GET',
-          headers:{
-            "content-type": "application/json",
-          }
-      })
-      .then(res => res.json())
-      .then(data => setAllFiles(data))
-    },[])
+    const { isLoading, error, data:allFiles,refetch } = useQuery('allFiles', () =>
+    fetch(('http://localhost:5000/files'), {
+      method: 'GET',
+      headers: {
+        "content-type": "application/json",
+      }
+    }).then(res =>
+      res.json()
+    )    
+  )
+  refetch()
+
+  if (isLoading) {
+    return <Loading/>
+  }
+
+  if (error) return 'An error has occurred: ' + error.message
     return (
         <div>
             <div className='grid gap-10 grid-cols-2 lg:grid-cols-4 mr-10 p-20'>
